@@ -1,4 +1,95 @@
-h1 {
-    color: brown;
-    background-color: black;
+/* Selector universal*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+:root {
+--mainColor: #CECBC6;
+--mainTextColor: #072A09;
+--secondaryColor: #FFBE58;
+--purpleColor: #3B0C5C;
+}
+
+body {
+    font-family: 'coolvetica';
+}
+
+a{
+    text-decoration: none;
+    color: var(--mainTextColor);
+}
+
+.logo {
+    font-size: 2 rem;
+}
+
+/*COMPONENTES*/
+/*Boton*/
+
+.boton{
+    background-color: var(--purpleColor);
+    color: var(--secondaryColor);
+}
+
+
+/*LAYOUT*/
+/* Header */
+
+header {
+    background-color: var(--mainColor);
+}
+
+header a {
+    color: var(--mainTextColor);
+}
+
+/* Navbar*/
+
+nav ul {
+    list-style-type: lower-latin;
+}
+
+/*Footer*/
+
+footer {
+    background-color: var(--mainTextColor);
+    color: var(--mainColor);
+}
+
+footer a {
+    color: var(--mainColor);
+}
+/* Home */
+/* Banner*/
+
+#banner {
+    text-align: center;
+    background-color: var(--mainColor);
+    color: var(--mainTextColor);
+    background-image: url("./Recursos/Playa\ fonto\ home.png");
+}
+
+#banner h1 {
+    font-weight: 200px;
+}
+#banner h2 {
+    font-weight: 100px;
+}
+
+/* Servicios */
+
+#servicios .servicio{
+    background-color: var(--mainTextColor);
+    color: var(--mainColor);
+}
+
+.servicio h2 {
+
+}
+.servicio h3 {
+    font-weight: 100px;
+}
+/*testimoniales */
+
