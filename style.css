@@ -31,24 +31,45 @@ a{
 .boton{
     background-color: var(--purpleColor);
     color: var(--secondaryColor);
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-align: center;
 }
-
 
 /*LAYOUT*/
 /* Header */
 
 header {
     background-color: var(--mainColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
 }
 
 header a {
     color: var(--mainTextColor);
 }
 
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 20px;
+    margin-right: 10px;
+}
 /* Navbar*/
 
 nav ul {
-    list-style-type: lower-latin;
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0px 30px;
 }
 
 /*Footer*/
@@ -69,13 +90,25 @@ footer a {
     background-color: var(--mainColor);
     color: var(--mainTextColor);
     background-image: url("./Recursos/Playa\ fonto\ home.png");
+    background-position: center;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px;
+}
+
+#banner p {
+    max-width: 800px;
+    text-align: center;
 }
 
 #banner h1 {
-    font-weight: 200px;
+    font-weight: 200;
 }
 #banner h2 {
-    font-weight: 100px;
+    font-weight: 100;
 }
 
 /* Servicios */
