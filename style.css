@@ -40,12 +40,12 @@ a{
 /* Header */
 
 header {
-    background-color: var(--mainTextColor);
+    background: linear-gradient(180deg, var(--mainTextColor), transparent);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    height: 60px;
+    height: 65px;
     position: fixed;
     width: 100%;
 }
@@ -79,6 +79,7 @@ nav ul li {
 footer {
     background-color: var(--mainTextColor);
     color: var(--mainColor);
+    height: 500px;
 }
 
 footer a {
@@ -172,20 +173,63 @@ footer a {
 
 /*opiniones */
 
+/*mostrar mas -- mostrar menos*/
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+article button {
+    display: flex;
+    padding: 1px 4px;
+    text-align: center;
+    align-items: center;
+
+}
+
+article button:hover {
+    box-shadow: none;
+    background-color: var(--mainTextColor);
+    color: var(--mainColor);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3.05s;
+}
+
+article .readMore_btn {
+    border-radius: 8px;
+    border: none;
+    color: var(--mainTextColor);
+    background-color: var(--mainColor);
+    font-family: coolvetica;
+    display: flex;
+    margin-top: 10px;
+}
+
+
+/* ---------------------------------------- */
+
 #opiniones article {
     color: var(--mainTextColor);
-    width: 40%;
-    box-shadow: 15px 15px 30px #9b9b9b,
-    -15px -15px 30px #ffffff;
-    padding: 20px;
-    margin-bottom: 40px;
-    border-radius: 8px;
+
+}
+
+.opinion {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    width: 20%;
     text-align: center;
     flex-direction: column;
-
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 15px 15px 30px #9b9b9b,
+    -15px -15px 30px #ffffff;
+    min-width: 300px;
+    margin: 20px;
+    flex-wrap: wrap;
 }
 
 #opiniones .titulo {
@@ -197,11 +241,9 @@ footer a {
     font-style: italic;
 }
 
-.opinionescontainer {
+.opinionesContainer {
     display: flex;
+    padding: 0 20px;
     justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    ;
-
+    flex-wrap:wrap ;
 }
