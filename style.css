@@ -93,7 +93,7 @@ footer a {
     color: var(--mainColor);
     background-image: url("./Recursos/pexels-tomfisk-2606532.jpg");
     background-position: center;
-    background-size: 100%;
+    background-size: 300vh;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -116,16 +116,92 @@ footer a {
 
 /* Servicios */
 
-#servicios .servicio{
+#servicios .servicio {
     background-color: var(--mainTextColor);
     color: var(--mainColor);
 }
 
-.servicio h2 {
-
+.servicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 15px 15px 30px #9b9b9b,
+    -15px -15px 30px #ffffff;
+    min-width: 300px;
+    margin: 20px;
 }
+
 .servicio h3 {
-    font-weight: 100px;
+    font-weight: 100;
 }
-/*testimoniales */
 
+.servicio p {
+    font-size: 14px;
+    margin: 20px 0 20px 0;
+}
+
+#servicios a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0 20px 0;
+}
+
+#servicios .titulo {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.servicescontainers {
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-around;
+    flex-wrap:wrap ;
+}
+
+
+
+.servicescontainers .servicio img {
+    width: 40px;
+}
+
+/*opiniones */
+
+#opiniones article {
+    color: var(--mainTextColor);
+    width: 40%;
+    box-shadow: 15px 15px 30px #9b9b9b,
+    -15px -15px 30px #ffffff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+#opiniones .titulo {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#opiniones article p{
+    font-style: italic;
+}
+
+.opinionescontainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    ;
+
+}
