@@ -40,16 +40,18 @@ a{
 /* Header */
 
 header {
-    background-color: var(--mainColor);
+    background-color: var(--mainTextColor);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     height: 60px;
+    position: fixed;
+    width: 100%;
 }
 
 header a {
-    color: var(--mainTextColor);
+    color: var(--mainColor);
 }
 
 header .logo {
@@ -88,10 +90,11 @@ footer a {
 #banner {
     text-align: center;
     background-color: var(--mainColor);
-    color: var(--mainTextColor);
-    background-image: url("./Recursos/Playa\ fonto\ home.png");
+    color: var(--mainColor);
+    background-image: url("./Recursos/pexels-tomfisk-2606532.jpg");
     background-position: center;
-    height: 94vh;
+    background-size: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,7 +103,7 @@ footer a {
 }
 
 #banner p {
-    max-width: 800px;
+    max-width: 1000px;
     text-align: center;
 }
 
