@@ -16,20 +16,19 @@
             <span>Kuwuago</span>
         </a>
 
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./pages/locations.html">Locations</a></li>
-                <li><a href="./pages/services.html">Services</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
-                <li><a href="">Owners</a></li>
-            </ul>
-        </nav>
-
         <a class ="boton" href="">Sing Up</a>
     </header>
 
-    <main>
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./pages/locations.html">Locations</a></li>
+            <li><a href="./pages/services.html">Services</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+            <li><a href="">Owners</a></li>
+        </ul>
+    </nav>
+    
         <section id="banner">
             <h1>Kuwuago Group</h1>
             <h2>Slogan</h2>
@@ -48,25 +47,25 @@
                 <article class="servicio">
                 <h3>Tours</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident quidem expedita quo explicabo amet consequuntur facere vero dolore, quisquam dolores obcaecati, exercitationem minima adipisci nesciunt quaerat libero praesentium fugit magni?</p>
-                <img src="./Recursos/tour_icon.png" alt="tour service icon">
+                <a href=""><img src="./Recursos/tour_icon.png" alt="tour service icon"></a>
             </article>
 
             <article class="servicio">
                 <h3>Transport</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sapiente ab, non animi, nostrum quaerat error molestiae maxime dignissimos cum neque in veniam, delectus facere hic! Voluptas tenetur aliquam sed.</p>
-                <img src="./Recursos/transport_icon.png" alt="transportation service icon">
+                <a href=""><img src="./Recursos/transport_icon.png" alt="transportation service icon"></a>
             </article>
 
             <article class="servicio">
                 <h3>Private Chef</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis obcaecati consequatur recusandae accusamus laborum sed maxime commodi repellat ipsam, minus, consectetur eveniet dignissimos, ullam molestiae ducimus aliquid. Natus, at a.</p>
-                <img src="./Recursos/chef_icon.png" alt="Chef sevice icon">
+                <a href=""><img src="./Recursos/chef_icon.png" alt="Chef sevice icon"></a>
             </article>
 
             <article class="servicio">
                 <h3>Spa session</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, nemo aperiam quasi, ducimus molestiae, animi est doloribus deleniti perspiciatis dignissimos tempore optio veniam quaerat tenetur blanditiis quo nobis nulla delectus.</p>
-                <img src="./Recursos/spa_relax_icon.png" alt="Spa session service icon">
+                <a href=""><img src="./Recursos/spa_relax_icon.png" alt="Spa session service icon"></a>
             </article>
             </div>
 
@@ -117,7 +116,20 @@
 
             <script src="/script.js"></script>
         </section>
-    </main>
+
+        <section id="casas">
+            <h2 class="titulo">Houses</h2>
+                <div class="casasContainer">
+                    <div class="casa casa1"></div>
+                    <div class="casa casa1-2"></div>
+                    <div class="casa casa1-3"></div>
+                    <div class="casa casa2"></div>
+                    <div class="casa casa2-2"></div>
+                    <div class="casa2-3"></div>
+                </div>
+
+        </section>
+
     <footer>
         <nav>
             <ul>
@@ -127,6 +139,19 @@
                 <li><a href="./pages/contact.html">Contact</a></li>
             </ul>
         </nav>
+
+
+        <form>
+            <label for="email">Suscríbete a nuestro newsletter:</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            <button class="boton" type="submit">Suscribirse</button>
+        </form>
+
+        <ul>
+            <li>
+                <a href="" target="_blank">Síguenos en Instagram</a>
+            </li>
+        </ul>
     </footer>
 </body>
 
