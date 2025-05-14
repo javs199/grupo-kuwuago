@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Kuwuago Group - Servicios de hospedaje y experiencias únicas en Costa Rica. Tours, transporte, chef privado y sesiones de spa."
+      content="Kuwago Group - Servicios de hospedaje y experiencias únicas en Costa Rica. Tours, transporte, chef privado y sesiones de spa."
     />
     <title>Kuwago</title>
+
+    <!--Bootstrap-->
+    
     <link rel="stylesheet" href="./style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
@@ -15,30 +18,41 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   </head>
 
   <body>
     <header>
-      <a class="logo" href="./index.html">
+
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid"></div>
+
+      <a class="navbar-brand" href="./index.html">
         <img
           src="./Recursos/logo.png"
-          alt="logo Kuwuago"
+          alt="logo Kuwago"
           width="50"
           height="100"
         />
         <span>Kuwago</span>
       </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+      <section class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Pages/abaut-us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Pages/vacation-rental.html">Vacation Rentals</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Pages/services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Pages/contact-us.html">Contact Us</a></li>
+        </ul>
+        </section>
+    </nav>
     </header>
 
-    <nav class="navbar">
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./Pages/abaut-us.html">About Us</a></li>
-        <li><a href="./Pages/vacation-rental.html">Vacation Rentals</a></li>
-        <li><a href="./Pages/services.html">Services</a></li>
-        <li><a href="./Pages/contact-us.html">Contact Us</a></li>
-      </ul>
-    </nav>
     <section id="banner">
       <h1>Kuwago Group</h1>
       <p>Always step forward and make a difference for better services</p>
@@ -51,11 +65,11 @@
         <article class="servicio">
           <h3>Property Management</h3>
           <p>
-            
+            We provide comprehensive management for your property, handling everything from daily supervision to preventive maintenance. Our goal is to keep your home in top condition, giving you peace of mind and consistent profitability.
           </p>
           <a href="">
             <img
-              src=""
+              src="./Recursos/5856548_building_buildings_cities_city_construction_icon.png"
               alt="property managemente service icon"
               width="50"
               height="50"
@@ -66,11 +80,11 @@
         <article class="servicio">
           <h3>Vacation Rentals</h3>
           <p>
-            
+            We optimize the vacation rental process to maximize occupancy and revenue. From listings and guest communication to check-ins and reviews, we ensure a seamless, memorable experience for every visitor.
           </p>
-          <a href="./pages/transport.html">
+          <a href="">
             <img
-              src="./Recursos/transport_icon.png"
+              src="./Recursos/3512614_beach_chair_summer_sunny_travel_icon.png"
               alt="vacation rentals service icon"
               width="50"
               height="50"
@@ -81,11 +95,11 @@
         <article class="servicio">
           <h3>Concierge Services</h3>
           <p>
-            
+            We offer personalized services to make every guest's stay exceptional. From booking tours and private chefs to arranging exclusive transportation, we take care of every detail for a truly elevated experience.
           </p>
-          <a href="./pages/chef.html">
+          <a href="">
             <img
-              src="./Recursos/chef_icon.png"
+              src="./Recursos/9004671_calendar_date_schedule_event_icon.png"
               alt="Concierge service icon"
               width="50"
               height="50"
@@ -96,11 +110,11 @@
         <article class="servicio">
           <h3>Social Media Marketing</h3>
           <p>
-            
+            We enhance your property's online presence through engaging content and targeted strategies on social media. Our approach boosts visibility, bookings, and your property's overall reputation.
           </p>
-          <a href="./pages/spa.html">
+          <a href="">
             <img
-              src="./Recursos/spa_relax_icon.png"
+              src="./Recursos/7898455_achievment_business_finance_office_marketing_icon.png"
               alt="Social Media service icon"
               width="50"
               height="50"
@@ -109,7 +123,7 @@
         </article>
       </div>
 
-      <a href="">Reseve Now</a>
+      <a href="./Pages/services.html">View More</a>
     </section>
 
     <section id="opiniones">
@@ -213,19 +227,18 @@
     </section>
 
     <section id="casas">
-      <h2 class="titulo">Photos</h2>
-      <div class="casasContainer">
-        <div class="casa casa1"></div>
-        <div class="casa casa1-2"></div>
-        <div class="casa casa1-3"></div>
-        <div class="casa casa2"></div>
-        <div class="casa casa2-2"></div>
-        <div class="casa casa2-3"></div>
-      </div>
+      <h2 class="titulo">Properties</h2>
+      <ul>
+        <li><div class="airbnb-embed-frame" data-id="1246489031596829262" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto;"><a href="https://es-l.airbnb.com/rooms/1246489031596829262?check_in=2025-01-07&amp;check_out=2025-01-12&amp;guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Ver en Airbnb</a><a href="https://es-l.airbnb.com/rooms/1246489031596829262?check_in=2025-01-07&amp;check_out=2025-01-12&amp;guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Villa · Osa · ★5.0 · 4 habitaciones · 5 camas · 4,5 baños</a><script async="" src="https://www.airbnb.co.cr/embeddable/airbnb_jssdk"></script></div></li>
+
+        <li><div class="airbnb-embed-frame" data-id="1213943468598082946" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto;"><a href="https://es-l.airbnb.com/rooms/1213943468598082946?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Ver en Airbnb</a><a href="https://es-l.airbnb.com/rooms/1213943468598082946?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Alojamiento · Osa · ★5.0 · 2 habitaciones · 4 camas · 2 baños</a><script async="" src="https://www.airbnb.co.cr/embeddable/airbnb_jssdk"></script></div></li>
+
+      </ul>
     </section>
 
     <footer>
       <nav>
+        <section>
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./Pages/abaut-us.html">About Us</a></li>
@@ -233,6 +246,38 @@
           <li><a href="./Pages/services.html">Services</a></li>
           <li><a href="./Pages/contact-us.html">Contact Us</a></li>
         </ul>
+        </section>
+        <section>
+          <ul>
+            <li>
+              <a
+                href="https://www.instagram.com/grupokuwago/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Follow us on Instagram
+                <img src="./Recursos/1161953_instagram_icon.png" alt="instagram icon"></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://wa.me/qr/GX66UFSRQ2K5G1"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Message us on WhatsApp
+                <img src="./Recursos/843786_whatsapp_icon.png" alt="whatsapp icon"></a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:ch.jesus.99@gmailcom"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Send us a Email
+                <img src="./Recursos/8666723_mail_icon.png" alt="email icon"></a
+              >
+            </li>
+          </ul>
+        </section>
       </nav>
 
       <form class="formulario">
@@ -248,24 +293,7 @@
         <button class="form boton" type="submit">Subscribe</button>
       </form>
 
-      <ul>
-        <li>
-          <a
-            href="https://www.instagram.com/grupokuwago/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Follow us on Instagram</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://wa.me/qr/GX66UFSRQ2K5G1"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Message us on WhatsApp</a
-          >
-        </li>
-      </ul>
+      
     </footer>
 
     <!-- Scripts -->
