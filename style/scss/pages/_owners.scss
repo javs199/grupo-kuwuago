@@ -23,83 +23,156 @@
 }
 
 .owners-section {
-    padding: 8rem 2rem 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 4rem 1rem;
 
     h1 {
-        font-family: 'Coolvetica', Arial, sans-serif;
-        font-size: 2.5rem;
-        color: $mainTextColor;
         text-align: center;
         margin-bottom: 3rem;
+        font-family: 'Coolvetica', Arial, sans-serif;
+        color: $mainTextColor;
     }
 
     .servicescontainers {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 2rem;
-        padding: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        width: 100%;
 
-        .servicio {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            transition: transform 0.3s ease;
+        @include respond-to(md) {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+        }
+    }
+
+    .servicio {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        width: 100%;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-header {
             display: flex;
-            flex-direction: column;
-            height: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
 
-            &:hover {
-                transform: translateY(-5px);
+            h3 {
+                font-family: 'Coolvetica', Arial, sans-serif;
+                color: $mainTextColor;
+                margin: 0;
+                font-size: 1.5rem;
             }
 
-            .service-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 1rem;
+            img {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+            }
+        }
 
-                h3 {
-                    font-family: 'Coolvetica', Arial, sans-serif;
-                    font-size: 1.5rem;
-                    color: $mainTextColor;
-                    margin: 0;
-                }
+        p {
+            color: $mainTextColor;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
 
-                img {
-                    width: 40px;
-                    height: 40px;
-                    object-fit: contain;
+        .service-footer {
+            .learn-more {
+                display: inline-block;
+                padding: 0.75rem 1.5rem;
+                background-color: $navbar-hover;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: darken($navbar-hover, 10%);
                 }
+            }
+        }
+    }
+
+    .property-registration {
+        margin-top: 4rem;
+        padding: 4rem 1rem;
+        background-color: #f8f9fa;
+
+        .registration-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            h2 {
+                text-align: center;
+                margin-bottom: 1.5rem;
+                font-family: 'Coolvetica', Arial, sans-serif;
+                color: $mainTextColor;
             }
 
             p {
+                text-align: center;
+                margin-bottom: 2rem;
                 color: $mainTextColor;
-                line-height: 1.6;
-                margin-bottom: 1.5rem;
-                flex-grow: 1;
             }
 
-            .service-footer {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-top: auto;
-                padding-top: 1rem;
-                border-top: 1px solid #eee;
+            .registration-form {
+                .form-group {
+                    margin-bottom: 1.5rem;
 
-                .learn-more {
+                    label {
+                        display: block;
+                        margin-bottom: 0.5rem;
+                        color: $mainTextColor;
+                        font-weight: 500;
+                    }
+
+                    input,
+                    select,
+                    textarea {
+                        width: 100%;
+                        padding: 0.75rem;
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+                        font-size: 1rem;
+                        transition: border-color 0.3s ease;
+
+                        &:focus {
+                            outline: none;
+                            border-color: $navbar-hover;
+                        }
+                    }
+
+                    textarea {
+                        min-height: 120px;
+                        resize: vertical;
+                    }
+                }
+
+                .submit-btn {
+                    width: 100%;
+                    padding: 1rem;
                     background-color: $navbar-hover;
                     color: white;
                     border: none;
-                    padding: 0.5rem 1rem;
                     border-radius: 5px;
+                    font-size: 1rem;
                     cursor: pointer;
                     transition: background-color 0.3s ease;
-                    text-decoration: none;
-                    font-size: 0.9rem;
 
                     &:hover {
                         background-color: darken($navbar-hover, 10%);
@@ -110,83 +183,30 @@
     }
 }
 
-// Estilos para la sección de registro de propiedades
-.property-registration {
-    padding: 4rem 2rem;
-    background-color: #f8f9fa;
-    margin-top: 4rem;
+@media (max-width: 768px) {
+    .owners-section {
+        padding: 2rem 1rem;
 
-    .registration-container {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-
-        h2 {
-            font-family: 'Coolvetica', Arial, sans-serif;
+        h1 {
             font-size: 2rem;
-            color: $mainTextColor;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            color: $mainTextColor;
-            font-size: 1.1rem;
             margin-bottom: 2rem;
         }
 
-        .registration-form {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .servicescontainers {
+            gap: 1.5rem;
+            padding: 0;
+        }
 
-            .form-group {
-                margin-bottom: 1.5rem;
-                text-align: left;
+        .servicio {
+            padding: 1.5rem;
+        }
 
-                label {
-                    display: block;
-                    margin-bottom: 0.5rem;
-                    color: $mainTextColor;
-                    font-weight: 500;
-                }
+        .property-registration {
+            margin-top: 2rem;
+            padding: 2rem 1rem;
 
-                input,
-                select,
-                textarea {
-                    width: 100%;
-                    padding: 0.75rem;
-                    border: 1px solid #ddd;
-                    border-radius: 5px;
-                    font-size: 1rem;
-                    transition: border-color 0.3s ease;
-
-                    &:focus {
-                        outline: none;
-                        border-color: $navbar-hover;
-                    }
-                }
-
-                textarea {
-                    resize: vertical;
-                }
-            }
-
-            .submit-btn {
-                background-color: $navbar-hover;
-                color: white;
-                border: none;
-                padding: 1rem 2rem;
-                border-radius: 5px;
-                font-size: 1.1rem;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-                width: 100%;
-                max-width: 300px;
-
-                &:hover {
-                    background-color: darken($navbar-hover, 10%);
-                }
+            .registration-container {
+                padding: 1.5rem;
             }
         }
     }
