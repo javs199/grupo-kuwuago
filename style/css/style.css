@@ -869,7 +869,7 @@ footer .formulario .boton:hover {
 .home-section .hero {
   width: 100%;
   min-height: 80vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../recursos/home.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/recursos/home.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1217,10 +1217,11 @@ footer .formulario .boton:hover {
   padding-top: 3rem;
 }
 .about-section .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../recursos/home.png");
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/recursos/home.png");
   background-size: cover;
   background-position: center;
-  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1353,112 +1354,122 @@ footer .formulario .boton:hover {
 }
 
 .owners-section {
-  overflow-x: hidden;
-  width: 100%;
-  padding: 4rem 1rem;
+  padding: 8rem 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .owners-section h1 {
+  font-family: "Coolvetica", Arial, sans-serif;
+  font-size: 2.5rem;
+  color: #000000;
   text-align: center;
   margin-bottom: 3rem;
-  font-family: "Coolvetica", Arial, sans-serif;
-  color: #000000;
 }
 .owners-section .servicescontainers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  width: 100%;
+  padding: 1rem;
 }
-@media (min-width: 768px) {
-  .owners-section .servicescontainers {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-  }
-}
-.owners-section .servicio {
-  background: white;
-  padding: 2rem;
+.owners-section .servicescontainers .servicio {
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
   transition: transform 0.3s ease;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.owners-section .servicio:hover {
+.owners-section .servicescontainers .servicio:hover {
   transform: translateY(-5px);
 }
-.owners-section .servicio .service-header {
+.owners-section .servicescontainers .servicio .service-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
-.owners-section .servicio .service-header h3 {
+.owners-section .servicescontainers .servicio .service-header h3 {
   font-family: "Coolvetica", Arial, sans-serif;
+  font-size: 1.5rem;
   color: #000000;
   margin: 0;
-  font-size: 1.5rem;
 }
-.owners-section .servicio .service-header img {
+.owners-section .servicescontainers .servicio .service-header img {
   width: 40px;
   height: 40px;
   object-fit: contain;
 }
-.owners-section .servicio p {
+.owners-section .servicescontainers .servicio p {
   color: #000000;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
-.owners-section .servicio .service-footer .learn-more {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+.owners-section .servicescontainers .servicio .service-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+.owners-section .servicescontainers .servicio .service-footer .learn-more {
   background-color: #FFBE58;
   color: white;
-  text-decoration: none;
+  border: none;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
-.owners-section .servicio .service-footer .learn-more:hover {
+.owners-section .servicescontainers .servicio .service-footer .learn-more:hover {
   background-color: rgb(255, 170.1497005988, 37);
 }
-.owners-section .property-registration {
-  margin-top: 4rem;
-  padding: 4rem 1rem;
+
+.property-registration {
+  padding: 4rem 2rem;
   background-color: #f8f9fa;
+  margin-top: 4rem;
 }
-.owners-section .property-registration .registration-container {
+.property-registration .registration-container {
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
+}
+.property-registration .registration-container h2 {
+  font-family: "Coolvetica", Arial, sans-serif;
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+.property-registration .registration-container p {
+  color: #000000;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.property-registration .registration-container .registration-form {
+  background-color: white;
   padding: 2rem;
-  background: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.owners-section .property-registration .registration-container h2 {
-  text-align: center;
+.property-registration .registration-container .registration-form .form-group {
   margin-bottom: 1.5rem;
-  font-family: "Coolvetica", Arial, sans-serif;
-  color: #000000;
+  text-align: left;
 }
-.owners-section .property-registration .registration-container p {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #000000;
-}
-.owners-section .property-registration .registration-container .registration-form .form-group {
-  margin-bottom: 1.5rem;
-}
-.owners-section .property-registration .registration-container .registration-form .form-group label {
+.property-registration .registration-container .registration-form .form-group label {
   display: block;
   margin-bottom: 0.5rem;
   color: #000000;
   font-weight: 500;
 }
-.owners-section .property-registration .registration-container .registration-form .form-group input,
-.owners-section .property-registration .registration-container .registration-form .form-group select,
-.owners-section .property-registration .registration-container .registration-form .form-group textarea {
+.property-registration .registration-container .registration-form .form-group input,
+.property-registration .registration-container .registration-form .form-group select,
+.property-registration .registration-container .registration-form .form-group textarea {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ddd;
@@ -1466,54 +1477,31 @@ footer .formulario .boton:hover {
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
-.owners-section .property-registration .registration-container .registration-form .form-group input:focus,
-.owners-section .property-registration .registration-container .registration-form .form-group select:focus,
-.owners-section .property-registration .registration-container .registration-form .form-group textarea:focus {
+.property-registration .registration-container .registration-form .form-group input:focus,
+.property-registration .registration-container .registration-form .form-group select:focus,
+.property-registration .registration-container .registration-form .form-group textarea:focus {
   outline: none;
   border-color: #FFBE58;
 }
-.owners-section .property-registration .registration-container .registration-form .form-group textarea {
-  min-height: 120px;
+.property-registration .registration-container .registration-form .form-group textarea {
   resize: vertical;
 }
-.owners-section .property-registration .registration-container .registration-form .submit-btn {
-  width: 100%;
-  padding: 1rem;
+.property-registration .registration-container .registration-form .submit-btn {
   background-color: #FFBE58;
   color: white;
   border: none;
+  padding: 1rem 2rem;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
 }
-.owners-section .property-registration .registration-container .registration-form .submit-btn:hover {
+.property-registration .registration-container .registration-form .submit-btn:hover {
   background-color: rgb(255, 170.1497005988, 37);
 }
 
-@media (max-width: 768px) {
-  .owners-section {
-    padding: 2rem 1rem;
-  }
-  .owners-section h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  .owners-section .servicescontainers {
-    gap: 1.5rem;
-    padding: 0;
-  }
-  .owners-section .servicio {
-    padding: 1.5rem;
-  }
-  .owners-section .property-registration {
-    margin-top: 2rem;
-    padding: 2rem 1rem;
-  }
-  .owners-section .property-registration .registration-container {
-    padding: 1.5rem;
-  }
-}
 /* Estilos para la página de travelers */
 /* Variables globales */
 body {
@@ -1823,10 +1811,11 @@ body {
   background-color: #f8f9fa;
 }
 .vacation-rental-section .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../recursos/home.png");
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/recursos/home.png");
   background-size: cover;
   background-position: center;
-  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
