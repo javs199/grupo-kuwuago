@@ -1,0 +1,153 @@
+.contact-section {
+    @extend .section;
+    background-color: #f8f9fa;
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+        align-items: start;
+
+        @include respond-to(md) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+
+    .contact-form {
+        @extend .card;
+        padding: 2.5rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .form-group {
+            margin-bottom: 1.5rem;
+
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                color: $mainTextColor;
+                font-weight: 500;
+            }
+
+            input,
+            select,
+            textarea {
+                width: 100%;
+                padding: 0.75rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+
+                &:focus {
+                    outline: none;
+                    border-color: $navbar-hover;
+                    box-shadow: 0 0 0 2px rgba($navbar-hover, 0.1);
+                }
+            }
+
+            textarea {
+                min-height: 150px;
+                resize: vertical;
+            }
+        }
+
+        .submit-btn {
+            @extend .btn;
+            width: 100%;
+            margin-top: auto;
+        }
+    }
+
+    .contact-info {
+        @extend .card;
+        padding: 2.5rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-family: 'Coolvetica', Arial, sans-serif;
+            font-size: 1.8rem;
+            color: $mainTextColor;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-section {
+            margin-bottom: 2rem;
+
+            h3 {
+                font-size: 1.2rem;
+                color: $mainTextColor;
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                i {
+                    color: $navbar-hover;
+                }
+            }
+
+            p {
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 0.5rem;
+            }
+
+            .contact-method {
+                @extend .flex;
+                margin-bottom: 0.5rem;
+
+                i {
+                    color: $navbar-hover;
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        .business-hours {
+            margin-top: auto;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+
+            h3 {
+                font-size: 1.2rem;
+                color: $mainTextColor;
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                i {
+                    color: $navbar-hover;
+                }
+            }
+
+            p {
+                color: #666;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    .map-container {
+        margin-top: 4rem;
+        width: 100%;
+        
+        iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: none;
+        }
+    }
+} 

@@ -1,0 +1,59 @@
+/* Mixins reutilizables */
+
+// Flexbox
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// Transiciones
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+    transition: $property $duration $timing;
+}
+
+// Media queries
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == sm {
+        @media (max-width: $breakpoint-sm) { @content; }
+    }
+    @else if $breakpoint == md {
+        @media (max-width: $breakpoint-md) { @content; }
+    }
+    @else if $breakpoint == lg {
+        @media (max-width: $breakpoint-lg) { @content; }
+    }
+    @else if $breakpoint == xl {
+        @media (max-width: $breakpoint-xl) { @content; }
+    }
+}
+
+// Efecto de hover con subrayado
+@mixin hover-underline($color: $navbar-hover) {
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $color;
+        transition: all 0.3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+// Efecto de escala al hover
+@mixin hover-scale($scale: 1.05) {
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: scale($scale);
+    }
+} 

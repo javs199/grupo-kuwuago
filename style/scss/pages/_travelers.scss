@@ -1,0 +1,177 @@
+/* Estilos para la página de travelers */
+@import '../themes/variables';
+
+body {
+    padding-top: 100px; 
+}
+
+.travelers-section {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    h1 {
+        font-family: 'Coolvetica', Arial, sans-serif;
+        font-size: 2.5rem;
+        color: $mainTextColor;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .services-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 1rem;
+
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            .carousel {
+                width: 100%;
+                height: 250px;
+                margin-bottom: 1rem;
+
+                .carousel-inner {
+                    height: 100%;
+
+                    .carousel-item {
+                        height: 100%;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+
+            .service-content {
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+
+                .service-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 1rem;
+
+                    h3 {
+                        font-family: 'Coolvetica', Arial, sans-serif;
+                        font-size: 1.5rem;
+                        color: $mainTextColor;
+                        margin: 0;
+                    }
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        object-fit: contain;
+                    }
+                }
+
+                .service-description {
+                    margin-bottom: 1.5rem;
+                    flex-grow: 1;
+                    
+                    p {
+                        color: $mainTextColor;
+                        line-height: 1.6;
+                        margin: 0;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        transition: all 0.3s ease;
+
+                        &.expanded {
+                            -webkit-line-clamp: unset;
+                        }
+                    }
+
+                    .view-more {
+                        background: none;
+                        border: none;
+                        color: $navbar-hover;
+                        padding: 0.5rem 0;
+                        cursor: pointer;
+                        font-family: 'Coolvetica', Arial, sans-serif;
+                        font-size: 0.9rem;
+                        text-align: left;
+                        margin-top: 0.5rem;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .service-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-top: 1rem;
+                    border-top: 1px solid #eee;
+                    margin-top: auto;
+
+                    .price {
+                        font-family: 'Coolvetica', Arial, sans-serif;
+                        font-size: 1.2rem;
+                        color: $navbar-hover;
+                        font-weight: bold;
+                    }
+
+                    .add-to-cart {
+                        background-color: $navbar-hover;
+                        color: white;
+                        border: none;
+                        padding: 0.5rem 1rem;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+
+                        &:hover {
+                            background-color: darken($navbar-hover, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Estilos para el carrito en la navbar
+.cart-icon {
+    position: relative;
+    margin-left: 1rem;
+    cursor: pointer;
+
+    .cart-count {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: $navbar-hover;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+} 

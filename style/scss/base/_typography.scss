@@ -1,0 +1,75 @@
+// Estilos de tipografía
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  margin-bottom: $spacing-md;
+  color: $primary-color;
+}
+
+h1 {
+  font-size: 2.5rem;
+  @include respond-to(md) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  @include respond-to(md) {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+  @include respond-to(md) {
+    font-size: 2rem;
+  }
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: $spacing-md;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  @include transition;
+  
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  position: relative;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: $accent-color;
+    margin: $spacing-sm auto 0;
+  }
+} 

@@ -7,8 +7,7 @@
     <title>Owners Section</title>
 
     <!--Bootstrap-->
-
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../style/css/style.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -17,91 +16,225 @@
 
 <body>
     <header>
-
         <nav class="navbar navbar-expand-md">
-            <div class="container-fluid"></div>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../Recursos/logo.png" alt="logo Kuwago" width="50" height="100" />
+                    <span>Kuwago</span>
+                </a>
 
-            <a class="navbar-brand" href="../index.html">
-                <img src="../Recursos/logo.png" alt="logo Kuwago" width="50" height="100" />
-                <span>Kuwago</span>
-            </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <section class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./abaut-us.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./vacation-rental.html">Vacation Rentals</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="./services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contact-us.html">Contact Us</a></li>
-                </ul>
-            </section>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./abaut-us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./vacation-rental.html">Vacation Rentals</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="./owners.html">Owners</a></li>
+                                <li><a class="dropdown-item" href="./travelers.html">Travelers</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./contact-us.html">Contact Us</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link login-btn" href="#">
+                                <i class="bi bi-person-circle"></i>
+                                Iniciar Sesión
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <body>
-        <section id="servicios">
-            <h2 class="titulo">Services</h2>
+    <main class="owners-section">
+        <h1>Property Management Services</h1>
 
-            <div class="servicescontainers">
-                <article class="servicio">
+        <div class="servicescontainers">
+            <article class="servicio">
+                <div class="service-header">
                     <h3>Getting Started</h3>
-                    <p> We'll craft a captivating and Experience professional listing for your property on Airbnb and
-                        other relevant platforms. This includes compelling descriptions, highlighting key features, and
-                        optimizing keywords to attract more bookings, ensuring your property stands out.
-                    </p>
-                    <a href=""><img src="" alt="" /></a>
-                </article>
+                    <img src="../Recursos/5856548_building_buildings_cities_city_construction_icon.png" alt="Getting started icon" />
+                </div>
+                <p>
+                    We'll craft a captivating and professional listing for your property on Airbnb and
+                    other relevant platforms. This includes compelling descriptions, highlighting key features, and
+                    optimizing keywords to attract more bookings, ensuring your property stands out.
+                </p>
+                <div class="service-footer">
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+            </article>
 
-                <h3>Initial Set Up</h3>
+            <article class="servicio">
+                <div class="service-header">
+                    <h3>Initial Set Up</h3>
+                    <img src="../Recursos/9004671_calendar_date_schedule_event_icon.png" alt="Initial setup icon" />
+                </div>
                 <p>
                     To make a strong first impression, we coordinate professional photography and videography of your
-                    property. high-quality visuals are crucial for attracting guests and showcasing the unique appeal of
+                    property. High-quality visuals are crucial for attracting guests and showcasing the unique appeal of
                     your home.
                 </p>
-                <a href=""><img src="" alt="" /></a>
-                </article>
+                <div class="service-footer">
+                    <a href="" class="learn-more">Learn More</a>
+                </div>
+            </article>
 
-                <h3>Guest Experience</h3>
+            <article class="servicio">
+                <div class="service-header">
+                    <h3>Guest Experience</h3>
+                    <img src="../Recursos/3512614_beach_chair_summer_sunny_travel_icon.png" alt="Guest experience icon" />
+                </div>
                 <p>
                     Our 24/7 availability ensures that guests receive prompt and professional support, leading to
                     positive reviews and repeat bookings.
                 </p>
-                <a href=""><img src="" alt="" /></a>
-                </article>
+                <div class="service-footer">
+                    <a href="" class="learn-more">Learn More</a>
+                </div>
+            </article>
 
-                <article class="servicio">
-                    <h3>Cleaning and Maintainance Coordination</h3>
-                    <p>
-                        We manage all aspects of cleaning between guests, ensuring your property is always spot less and
-                        welcoming.
-                    </p>
-                    <a href=""><img src="" alt="" /></a>
-                </article>
+            <article class="servicio">
+                <div class="service-header">
+                    <h3>Cleaning and Maintenance</h3>
+                    <img src="../Recursos/cleaning-icon.png" alt="Cleaning icon" />
+                </div>
+                <p>
+                    We manage all aspects of cleaning between guests, ensuring your property is always spotless and
+                    welcoming.
+                </p>
+                <div class="service-footer">
+                    <a href="" class="learn-more">Learn More</a>
+                </div>
+            </article>
 
-                <article class="servicio">
+            <article class="servicio">
+                <div class="service-header">
                     <h3>Payment Management</h3>
-                    <p>
-                        We handle all booking payments securel y and ensure timely disbursement of your earnings ,
-                        providing you with clear and concise financial reports.
-                    </p>
-                    <a href=""><img src="" alt="" /></a>
-                </article>
+                    <img src="../Recursos/payment_icon.png" alt="Payment icon" />
+                </div>
+                <p>
+                    We handle all booking payments securely and ensure timely disbursement of your earnings,
+                    providing you with clear and concise financial reports.
+                </p>
+                <div class="service-footer">
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+            </article>
 
-                <article class="servicio">
-                    <h3>Montly Reports</h3>
-                    <p>
-                        Stay informed about your property's performance. These reports provide insights into occupancy
-                        rates, revenue generated, guest feedback, and any maintenance updates, giving you a clear over
-                        view of your investment.
-                    </p>
-                    <a href=""><img src="." alt="" /></a>
+            <article class="servicio">
+                <div class="service-header">
+                    <h3>Monthly Reports</h3>
+                    <img src="../Recursos/stats_icon.png" alt="Report icon" />
+                </div>
+                <p>
+                    Stay informed about your property's performance. These reports provide insights into occupancy
+                    rates, revenue generated, guest feedback, and any maintenance updates, giving you a clear overview
+                    of your investment.
+                </p>
+                <div class="service-footer">
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+            </article>
+        </div>
 
+        <section class="property-registration">
+            <div class="registration-container">
+                <h2>Ready to maximize your property's potential?</h2>
+                <p>Schedule a free consultation with our team and discover how we can help optimize your investment.</p>
+                
+                <form class="registration-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="property-type">Property Type</label>
+                        <select id="property-type" name="property-type" required>
+                            <option value="">Select an option</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="villa">Villa</option>
+                            <option value="condo">Condominium</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Property Location</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Schedule Consultation</button>
+                </form>
             </div>
-    </body>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="../index.html" class="footer-brand">
+                <img src="../Recursos/logo.png" alt="logo Kuwago" />
+                <span>Kuwago</span>
+            </a>
+            <section>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./abaut-us.html">About Us</a></li>
+                    <li><a href="./vacation-rental.html">Vacation Rentals</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./contact-us.html">Contact Us</a></li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/grupokuwago/" target="_blank" rel="noopener noreferrer">Follow us on
+                            Instagram
+                            <img src="../Recursos/1161953_instagram_icon.png" alt="instagram icon"></a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/qr/GX66UFSRQ2K5G1" target="_blank" rel="noopener noreferrer">Message us on WhatsApp
+                            <img src="../Recursos/843786_whatsapp_icon.png" alt="whatsapp icon"></a>
+                    </li>
+                    <li>
+                        <a href="mailto:ch.jesus.99@gmailcom" target="_blank" rel="noopener noreferrer">Send us a Email
+                            <img src="../Recursos/8666723_mail_icon.png" alt="email icon"></a>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+
+        <form class="formulario">
+            <label class="form" for="email">Subscribe to our newsletter:</label>
+            <input class="form" type="email" id="email" name="email" placeholder="Your email address" required />
+            <button class="form boton" type="submit">Subscribe</button>
+        </form>
+    </footer>
+</body>
 
 </html>

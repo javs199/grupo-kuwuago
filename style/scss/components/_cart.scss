@@ -1,0 +1,103 @@
+// Estilos del carrito
+.cart-icon {
+  position: relative;
+  
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: $accent-color;
+    color: $white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+  }
+}
+
+.cart-item {
+  @include flex(row, space-between, center);
+  padding: $spacing-md;
+  border-bottom: 1px solid $border-color;
+
+  .item-details {
+    h5 {
+      margin: 0;
+      color: $primary-color;
+    }
+
+    p {
+      margin: $spacing-xs 0 0;
+      color: $text-color;
+    }
+  }
+}
+
+.cart-total {
+  padding: $spacing-md;
+  text-align: right;
+  font-weight: bold;
+  color: $primary-color;
+}
+
+// Modal del carrito
+.modal-content {
+  border-radius: $border-radius;
+  @include box-shadow(2);
+  
+  .modal-header {
+    border-bottom: 1px solid $border-color;
+    padding: $spacing-md;
+    
+    .modal-title {
+      color: $primary-color;
+      margin: 0;
+    }
+  }
+  
+  .modal-body {
+    padding: $spacing-md;
+  }
+  
+  .modal-footer {
+    border-top: 1px solid $border-color;
+    padding: $spacing-md;
+  }
+}
+
+// Notificación toast
+.toast-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $primary-color;
+  color: $white;
+  padding: $spacing-md;
+  border-radius: $border-radius;
+  animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+  z-index: 1000;
+  @include box-shadow;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+} 

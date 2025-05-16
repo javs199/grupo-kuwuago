@@ -1,0 +1,142 @@
+@import '../themes/variables';
+
+.about-section {
+    padding-top: 3rem;
+
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../Recursos/playa-fonto-home.png');
+        background-size: cover;
+        background-position: center;
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 2rem;
+
+        h1 {
+            font-family: 'Coolvetica', Arial, sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+    }
+
+    .mission-vision {
+        padding: 4rem 0;
+        background-color: white;
+
+        .mission-box, .vision-box {
+            padding: 2rem;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            h2 {
+                font-family: 'Coolvetica', Arial, sans-serif;
+                color: $mainTextColor;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: $mainTextColor;
+                line-height: 1.6;
+            }
+        }
+
+        .mission-box {
+            background-color: #fff;
+            border-left: 4px solid $navbar-hover;
+        }
+
+        .vision-box {
+            background-color: #fff;
+            border-left: 4px solid darken($navbar-hover, 10%);
+        }
+    }
+
+    .about-content {
+        padding: 4rem 0;
+        background-color: #f8f9fa;
+
+        .content-box {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            h2 {
+                font-family: 'Coolvetica', Arial, sans-serif;
+                color: $mainTextColor;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+
+            p {
+                color: $mainTextColor;
+                line-height: 1.8;
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .values {
+        padding: 4rem 0;
+        background-color: white;
+
+        h2 {
+            font-family: 'Coolvetica', Arial, sans-serif;
+            color: $mainTextColor;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .value-box {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            i {
+                font-size: 2.5rem;
+                color: $navbar-hover;
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                font-family: 'Coolvetica', Arial, sans-serif;
+                color: $mainTextColor;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: $mainTextColor;
+                line-height: 1.6;
+            }
+        }
+    }
+} 

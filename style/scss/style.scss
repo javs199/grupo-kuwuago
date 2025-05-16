@@ -1,0 +1,323 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/coolvetica');
+
+/* Abstracts */
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+/* Vendors */
+@import 'vendors/bootstrap';
+
+/* Base */
+@import 'base/reset';
+@import 'base/typography';
+
+/* Layout */
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grid';
+
+/* Components */
+@import 'components/navbar';
+@import 'components/carousel';
+@import 'components/buttons';
+@import 'components/cart';
+
+/* Pages */
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/owners';
+@import 'pages/travelers';
+@import 'pages/contact';
+@import 'pages/vacation-rental';
+
+/* Themes */
+@import 'themes/default';
+
+// Estilos globales
+body {
+    padding-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    color: $mainTextColor;
+    line-height: 1.6;
+}
+
+// Estilos comunes para secciones
+.section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h1,
+    h2 {
+        font-family: 'Coolvetica', Arial, sans-serif;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+// Estilos comunes para formularios
+.form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: $mainTextColor;
+        font-weight: 500;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: $navbar-hover;
+        }
+    }
+}
+
+// Estilos comunes para botones
+.btn {
+    background-color: $navbar-hover;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($navbar-hover, 10%);
+    }
+}
+
+// Estilos comunes para tarjetas
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+// Estilos comunes para contenedores
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+// Estilos comunes para grid
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+// Estilos comunes para flexbox
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+// Estilos comunes para iconos
+.icon {
+    color: $navbar-hover;
+    font-size: 1.2rem;
+}
+
+// Estilos comunes para enlaces
+a {
+    color: $navbar-hover;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: darken($navbar-hover, 10%);
+    }
+}
+
+
+// Toast Notification
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: $primary-color;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.travelers-section {
+    padding: 2rem;
+    background-color: #f8f9fa;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: $primary-color;
+    }
+
+    .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .service-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 350px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .carousel {
+            height: 250px;
+
+            .carousel-inner {
+                height: 100%;
+
+                .carousel-item {
+                    height: 100%;
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 10%;
+                opacity: 0.8;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            .carousel-indicators {
+                margin-bottom: 0.5rem;
+
+                button {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin: 0 4px;
+                }
+            }
+        }
+
+        .service-content {
+            padding: 1.5rem;
+
+            .service-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+
+                h3 {
+                    margin: 0;
+                    color: $primary-color;
+                    font-size: 1.5rem;
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    object-fit: contain;
+                }
+            }
+
+            .service-description {
+                margin-bottom: 1.5rem;
+
+                p {
+                    margin: 0;
+                    color: #666;
+                    line-height: 1.5;
+                }
+            }
+
+            .service-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .price {
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                    color: $primary-color;
+                }
+
+                .btn-primary {
+                    background-color: $primary-color;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: darken($primary-color, 10%);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,167 @@
+/* Estilos de la barra de navegación */
+@import '../themes/variables';
+
+.navbar {
+    padding: 0.5rem 1rem;
+    background-color: $navbar-bg;
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Coolvetica', sans-serif;
+
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $mainTextColor;
+        transition: $navbar-transition;
+        font-family: 'Coolvetica', sans-serif;
+
+        img {
+            margin-right: 10px;
+            width: 50px;
+            height: 100px;
+            transition: $navbar-transition;
+        }
+
+        span {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Coolvetica', sans-serif;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+        font-family: 'Coolvetica', sans-serif;
+
+        .nav-item {
+            position: relative;
+
+            .nav-link {
+                color: $mainTextColor;
+                text-decoration: none;
+                font-size: 1.1rem;
+                transition: $navbar-transition;
+                padding: 0.5rem 0;
+                position: relative;
+                font-family: 'Coolvetica', sans-serif;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: $navbar-hover;
+                    transition: $navbar-transition;
+                }
+
+                &:hover, &.active {
+                    color: $navbar-hover;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                &.dropdown-toggle::after {
+                    display: none;
+                }
+            }
+
+            .dropdown-menu {
+                background-color: $navbar-bg;
+                backdrop-filter: blur(5px);
+                border: none;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                padding: 0.5rem 0;
+                font-family: 'Coolvetica', sans-serif;
+
+                .dropdown-item {
+                    color: $mainTextColor;
+                    padding: 0.5rem 1rem;
+                    transition: $navbar-transition;
+                    font-family: 'Coolvetica', sans-serif;
+
+                    &:hover, &.active {
+                        background-color: rgba($navbar-hover, 0.1);
+                        color: $navbar-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 0.5rem;
+        transition: $navbar-transition;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 33, 33, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+    }
+}
+
+// Media queries para responsividad
+@media (max-width: $breakpoint-md) {
+    .navbar {
+        .navbar-collapse {
+            background-color: $navbar-bg;
+            backdrop-filter: blur(5px);
+            padding: 1rem;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+
+            .nav-item {
+                width: 100%;
+
+                .nav-link {
+                    display: block;
+                    width: 100%;
+                }
+
+                .dropdown-menu {
+                    position: static;
+                    width: 100%;
+                    box-shadow: none;
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }
+} 

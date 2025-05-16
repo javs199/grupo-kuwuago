@@ -1,0 +1,33 @@
+// Personalizaciones de Bootstrap
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "accent": $accent-color
+);
+
+// Personalización de la tipografía
+$font-family-base: $font-family-base;
+$font-family-heading: $font-family-heading;
+
+// Personalización de espaciado
+$spacer: $spacing-md;
+$spacers: (
+  0: 0,
+  1: $spacing-xs,
+  2: $spacing-sm,
+  3: $spacing-md,
+  4: $spacing-lg,
+  5: $spacing-xl
+);
+
+// Personalización de bordes
+$border-radius: $border-radius;
+$border-color: $border-color;
+
+// Personalización de sombras
+$box-shadow: $box-shadow;
+$box-shadow-sm: $box-shadow;
+$box-shadow-lg: $box-shadow-hover;
+
+// Personalización de transiciones
+$transition-base: $transition-base; 

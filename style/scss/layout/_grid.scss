@@ -1,0 +1,72 @@
+// Grid system
+.container {
+  width: 100%;
+  padding-right: $spacing-md;
+  padding-left: $spacing-md;
+  margin-right: auto;
+  margin-left: auto;
+  
+  @include respond-to(sm) {
+    max-width: 540px;
+  }
+  
+  @include respond-to(md) {
+    max-width: 720px;
+  }
+  
+  @include respond-to(lg) {
+    max-width: 960px;
+  }
+  
+  @include respond-to(xl) {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  @include flex(row, flex-start, stretch, wrap);
+  margin-right: -$spacing-md;
+  margin-left: -$spacing-md;
+}
+
+.col {
+  flex: 1 0 0%;
+  padding-right: $spacing-md;
+  padding-left: $spacing-md;
+}
+
+// Columnas específicas
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: percentage($i / 12);
+    padding-right: $spacing-md;
+    padding-left: $spacing-md;
+  }
+}
+
+// Grid para servicios
+.services-grid {
+  @include grid(1, $spacing-lg);
+  
+  @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @include respond-to(xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Grid para propiedades
+.properties-grid {
+  @include grid(1, $spacing-lg);
+  
+  @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 

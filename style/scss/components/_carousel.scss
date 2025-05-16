@@ -1,0 +1,68 @@
+// Estilos del carrusel
+.carousel {
+  margin-bottom: $spacing-md;
+  border-radius: $border-radius;
+  overflow: hidden;
+  @include box-shadow;
+  
+  .carousel-inner {
+    height: 300px;
+    
+    .carousel-item {
+      height: 100%;
+      
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+    opacity: 0.8;
+    @include transition;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+  
+  .carousel-indicators {
+    margin-bottom: $spacing-sm;
+    
+    button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 4px;
+      background-color: $white;
+      border: 1px solid $primary-color;
+      
+      &.active {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+// Carrusel específico para servicios
+.service-card {
+  .carousel {
+    height: 250px;
+    
+    .carousel-inner {
+      height: 100%;
+      
+      .carousel-item {
+        height: 100%;
+        
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+} 

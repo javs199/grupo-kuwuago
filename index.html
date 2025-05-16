@@ -6,228 +6,192 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Kuwago Group - Servicios de hospedaje y experiencias únicas en Costa Rica. Tours, transporte, chef privado y sesiones de spa." />
-  <title>Kuwago</title>
+  <title>Kuwago - Experiencias Únicas en Costa Rica</title>
 
   <!--Bootstrap-->
 
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style/css/style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
-
     <nav class="navbar navbar-expand-md">
-      <div class="container-fluid"></div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./Recursos/logo.png" alt="logo Kuwago" width="50" height="100" />
+          <span>Kuwago</span>
+        </a>
 
-      <a class="navbar-brand" href="./index.html">
-        <img src="./Recursos/logo.png" alt="logo Kuwago" width="50" height="100" />
-        <span>Kuwago</span>
-      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <section class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="./Pages/abaut-us.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="./Pages/vacation-rental.html">Vacation Rentals</a></li>
-          <li class="nav-item"><a class="nav-link" href="./Pages/services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="./Pages/contact-us.html">Contact Us</a></li>
-        </ul>
-      </section>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./Pages/abaut-us.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="./Pages/vacation-rental.html">Vacation Rentals</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./Pages/owners.html">Owners</a></li>
+                <li><a class="dropdown-item" href="./Pages/travelers.html">Travelers</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="./Pages/contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <section id="banner">
-    <h1>Kuwago Group</h1>
-    <p>Always step forward and make a difference for better services</p>
-  </section>
-
-  <section id="servicios">
-    <h2 class="titulo">Our Services</h2>
-
-    <div class="servicescontainers">
-      <article class="servicio">
-        <h3>Property Management</h3>
-        <p>
-          We provide comprehensive management for your property, handling everything from daily supervision to
-          preventive maintenance. Our goal is to keep your home in top condition, giving you peace of mind and
-          consistent profitability.
-        </p>
-        <a href="">
-          <img src="./Recursos/5856548_building_buildings_cities_city_construction_icon.png"
-            alt="property managemente service icon" width="50" height="50" />
-        </a>
-      </article>
-
-      <article class="servicio">
-        <h3>Vacation Rentals</h3>
-        <p>
-          We optimize the vacation rental process to maximize occupancy and revenue. From listings and guest
-          communication to check-ins and reviews, we ensure a seamless, memorable experience for every visitor.
-        </p>
-        <a href="">
-          <img src="./Recursos/3512614_beach_chair_summer_sunny_travel_icon.png" alt="vacation rentals service icon"
-            width="50" height="50" />
-        </a>
-      </article>
-
-      <article class="servicio">
-        <h3>Concierge Services</h3>
-        <p>
-          We offer personalized services to make every guest's stay exceptional. From booking tours and private chefs to
-          arranging exclusive transportation, we take care of every detail for a truly elevated experience.
-        </p>
-        <a href="">
-          <img src="./Recursos/9004671_calendar_date_schedule_event_icon.png" alt="Concierge service icon" width="50"
-            height="50" />
-        </a>
-      </article>
-
-      <article class="servicio">
-        <h3>Social Media Marketing</h3>
-        <p>
-          We enhance your property's online presence through engaging content and targeted strategies on social media.
-          Our approach boosts visibility, bookings, and your property's overall reputation.
-        </p>
-        <a href="">
-          <img src="./Recursos/7898455_achievment_business_finance_office_marketing_icon.png"
-            alt="Social Media service icon" width="50" height="50" />
-        </a>
-      </article>
-    </div>
-
-    <a href="./Pages/services.html">View More</a>
-  </section>
-
-  <section id="opiniones">
-    <h2 class="titulo">Reviews</h2>
-
-    <div class="opinionesContainer">
-      <article class="opinion">
-        <h3>Vincent</h3>
-        <p>
-          This was a great experience. This place has a sauna! A hot tub, its
-          in the middle of nature, the stars are beautiful and you are really
-          in the jungle. The place itself is very pretty and I cannot express
-          enough how comfortable it was and well setup/designed. We loved our
-          stay. It was near everything and made us really feel like we got an
-          authentic experience.
-        </p>
-
-        <span class="hide" id="hideText1">
-          Bonus points bc we heard monkeys while in the hot tub right above us
-          and also checked out a secret trail that led to a river! It was
-          amazing! Noehmy was such a great host, and very communicative. She
-          gave us great recos (which we tried!! A restaurant and a place that
-          played awesome music for a night out). Thanks for everything
-        </span>
-
-        <button class="readMore_btn" id="hideText_btn1" aria-label="Read more about Vincent's review">
-          Read More
-        </button>
-      </article>
-
-      <article class="opinion">
-        <h3>Julius</h3>
-        <p>
-          Our stay at the Airbnb in Uvita, Costa Rica, was nothing short of
-          spectacular. Nestled in the lush jungle with breathtaking views of
-          the Pacific Ocean, this home provided the perfect blend of luxury,
-          comfort, and tropical charm. The pool was a true highlight—perfectly
-          positioned to soak in the stunning sunsets, surrounded by the sounds
-          of nature.
-        </p>
-        <span class="hide" id="hideText2">
-          Relaxing in the hot tub after a day of exploring was an absolute
-          dream, and the outdoor shower added a refreshing, spa-like
-          experience. The home itself was beautifully designed with an
-          open-concept layout, featuring a massive chef's kitchen that made
-          preparing meals a joy. Fully stocked with top-of-the-line appliances
-          and plenty of space, it was ideal for cooking up fresh local
-          ingredients. The spacious living areas provided a perfect space to
-          unwind, while the private bedrooms offered comfort and tranquility,
-          each with its own unique view. Great location close to good beaches
-          and city center.
-        </span>
-        <button class="readMore_btn" id="hideText_btn2" aria-label="Read more about Julius's review">
-          Read More
-        </button>
-      </article>
-
-      <article class="opinion">
-        <h3>Billy</h3>
-        <p>
-          Nahomy's place is wonderful! My partner and I spent five days there
-          and enjoyed every minute. We felt very comfortable because of the
-          beautiful kitchen, Bluetooth stereo, well stocked bathrooms, washer
-          & dryer, and of course the Jacuzzi & sauna. If that wasn't enough,
-          Nahomy gave us incredible recommendations that gave us plenty to do
-          and was extremely responsive. A top tier host! Book asap!
-        </p>
-      </article>
-
-      <article class="opinion">
-        <h3>Michael</h3>
-        <p>
-          Wow, what an incredible and standout airbnb in the Uvita area! Not
-          only was the house spectacular but the hosts were incredible and
-          extremely helpful with ally needs and questions about the house and
-          the area. The airbnb itself was perfection and they thought of
-          everything someone could possibly need. The hot tub was perfect,
-          especially in those rainy moments, the kitchen was fully stocked,
-          the showers were excellent,
-        </p>
-        <span class="hide" id="hideText">the AC was a strong and the house was styled beautifully. Plenty of
-          toucans and Congo monkeys graced the trees every morning and the
-          waterhole on the property was super cool. Highly recommend this
-          airbnb!
-        </span>
-
-        <button class="readMore_btn" id="hideText_btn">Read More</button>
-      </article>
-    </div>
-
-    <script src="/script.js"></script>
-  </section>
-
-  <section id="casas">
-    <h2 class="titulo">Properties</h2>
-    <ul>
-      <li>
-        <div class="airbnb-embed-frame" data-id="1246489031596829262" data-view="home" data-hide-price="true"
-          style="width: 450px; height: 300px; margin: auto;"><a
-            href="https://es-l.airbnb.com/rooms/1246489031596829262?check_in=2025-01-07&amp;check_out=2025-01-12&amp;guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Ver
-            en Airbnb</a><a
-            href="https://es-l.airbnb.com/rooms/1246489031596829262?check_in=2025-01-07&amp;check_out=2025-01-12&amp;guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-            rel="nofollow">Villa · Osa · ★5.0 · 4 habitaciones · 5 camas · 4,5 baños</a>
-          <script async="" src="https://www.airbnb.co.cr/embeddable/airbnb_jssdk"></script>
+  <main class="home-section">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Kuwago Group</h1>
+        <p>Discover the perfect blend of luxury and adventure in Costa Rica</p>
+        <div class="hero-buttons">
+          <a href="./Pages/vacation-rental.html" class="btn btn-primary">Explore Properties</a>
+          <a href="./Pages/travelers.html" class="btn btn-outline">View Services</a>
         </div>
-      </li>
+      </div>
+    </section>
 
-      <li>
-        <div class="airbnb-embed-frame" data-id="1213943468598082946" data-view="home" data-hide-price="true"
-          style="width: 450px; height: 300px; margin: auto;"><a
-            href="https://es-l.airbnb.com/rooms/1213943468598082946?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Ver
-            en Airbnb</a><a
-            href="https://es-l.airbnb.com/rooms/1213943468598082946?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-            rel="nofollow">Alojamiento · Osa · ★5.0 · 2 habitaciones · 4 camas · 2 baños</a>
-          <script async="" src="https://www.airbnb.co.cr/embeddable/airbnb_jssdk"></script>
+    <section class="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="./Recursos/5856548_building_buildings_cities_city_construction_icon.png" alt="property management service icon" />
+            </div>
+            <h3>Property Management</h3>
+            <p>We provide comprehensive management for your property, handling everything from daily supervision to preventive maintenance.</p>
+            <a href="./Pages/owners.html" class="learn-more">Learn More</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="./Recursos/3512614_beach_chair_summer_sunny_travel_icon.png" alt="vacation rentals service icon" />
+            </div>
+            <h3>Vacation Rentals</h3>
+            <p>We optimize the vacation rental process to maximize occupancy and revenue while ensuring a memorable experience for every visitor.</p>
+            <a href="./Pages/vacation-rental.html" class="learn-more">Learn More</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="./Recursos/9004671_calendar_date_schedule_event_icon.png" alt="Concierge service icon" />
+            </div>
+            <h3>Concierge Services</h3>
+            <p>We offer personalized services to make every guest's stay exceptional, from booking tours to arranging exclusive transportation.</p>
+            <a href="./Pages/travelers.html" class="learn-more">Learn More</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="./Recursos/7898455_achievment_business_finance_office_marketing_icon.png" alt="Social Media service icon" />
+            </div>
+            <h3>Social Media Marketing</h3>
+            <p>We enhance your property's online presence through engaging content and targeted strategies on social media platforms.</p>
+            <a href="./Pages/owners.html" class="learn-more">Learn More</a>
+          </article>
         </div>
-      </li>
+      </div>
+    </section>
 
-    </ul>
-  </section>
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Guests Say</h2>
+        <div class="testimonials-slider">
+          <article class="testimonial-card">
+            <div class="testimonial-content">
+              <h3>Vincent</h3>
+              <p>This was a great experience. This place has a sauna! A hot tub, it's in the middle of nature, the stars are beautiful and you are really in the jungle. The place itself is very pretty and I cannot express enough how comfortable it was and well setup/designed.</p>
+              <div class="testimonial-expand">
+                <span class="hide" id="hideText1">
+                  Bonus points bc we heard monkeys while in the hot tub right above us and also checked out a secret trail that led to a river! It was amazing! Noehmy was such a great host, and very communicative. She gave us great recos (which we tried!! A restaurant and a place that played awesome music for a night out). Thanks for everything
+                </span>
+                <button class="readMore_btn" id="hideText_btn1">Read More</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-content">
+              <h3>Julius</h3>
+              <p>Our stay at the Airbnb in Uvita, Costa Rica, was nothing short of spectacular. Nestled in the lush jungle with breathtaking views of the Pacific Ocean, this home provided the perfect blend of luxury, comfort, and tropical charm.</p>
+              <div class="testimonial-expand">
+                <span class="hide" id="hideText2">
+                  Relaxing in the hot tub after a day of exploring was an absolute dream, and the outdoor shower added a refreshing, spa-like experience. The home itself was beautifully designed with an open-concept layout, featuring a massive chef's kitchen that made preparing meals a joy.
+                </span>
+                <button class="readMore_btn" id="hideText_btn2">Read More</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-content">
+              <h3>Billy</h3>
+              <p>Nahomy's place is wonderful! My partner and I spent five days there and enjoyed every minute. We felt very comfortable because of the beautiful kitchen, Bluetooth stereo, well stocked bathrooms, washer & dryer, and of course the Jacuzzi & sauna.</p>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-content">
+              <h3>Michael</h3>
+              <p>Wow, what an incredible and standout airbnb in the Uvita area! Not only was the house spectacular but the hosts were incredible and extremely helpful with all needs and questions about the house and the area.</p>
+              <div class="testimonial-expand">
+                <span class="hide" id="hideText3">
+                  The airbnb itself was perfection and they thought of everything someone could possibly need. The hot tub was perfect, especially in those rainy moments, the kitchen was fully stocked, the showers were excellent, the AC was strong and the house was styled beautifully.
+                </span>
+                <button class="readMore_btn" id="hideText_btn3">Read More</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="properties">
+      <div class="container">
+        <h2 class="section-title">Featured Properties</h2>
+        <div class="properties-grid">
+          <article class="property-card">
+            <div class="airbnb-embed-frame" data-id="1246489031596829262" data-view="home" data-hide-price="true">
+              <a href="https://es-l.airbnb.com/rooms/1246489031596829262?check_in=2025-01-07&amp;check_out=2025-01-12&amp;guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">View on Airbnb</a>
+              <a href="https://es-l.airbnb.com/rooms/1246489031596829262?check_in=2025-01-07&amp;check_out=2025-01-12&amp;guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Villa · Osa · ★5.0 · 4 bedrooms · 5 beds · 4.5 baths</a>
+            </div>
+          </article>
+
+          <article class="property-card">
+            <div class="airbnb-embed-frame" data-id="1213943468598082946" data-view="home" data-hide-price="true">
+              <a href="https://es-l.airbnb.com/rooms/1213943468598082946?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">View on Airbnb</a>
+              <a href="https://es-l.airbnb.com/rooms/1213943468598082946?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Accommodation · Osa · ★5.0 · 2 bedrooms · 4 beds · 2 baths</a>
+            </div>
+          </article>
+        </div>
+        <div class="coming-soon">
+          <i class="bi bi-house-heart"></i>
+          <p>¡More destinations coming soon for your comfort and enjoyment.
+!</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <nav>
+      <a href="./index.html" class="footer-brand">
+        <img src="./Recursos/logo.png" alt="logo Kuwago" />
+        <span>Kuwago</span>
+      </a>
       <section>
         <ul>
           <li><a href="./index.html">Home</a></li>
@@ -269,7 +233,28 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
-  <script src="./script.js"></script>
+  <script async src="https://www.airbnb.co.cr/embeddable/airbnb_jssdk"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const readMoreButtons = document.querySelectorAll('.readMore_btn');
+      
+      readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const testimonial = this.closest('.testimonial-expand');
+          const hiddenText = testimonial.querySelector('.hide');
+          const isExpanded = hiddenText.classList.contains('expanded');
+          
+          if (isExpanded) {
+            hiddenText.classList.remove('expanded');
+            this.textContent = 'Read More';
+          } else {
+            hiddenText.classList.add('expanded');
+            this.textContent = 'Read Less';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
