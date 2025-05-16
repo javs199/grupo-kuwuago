@@ -869,7 +869,7 @@ footer .formulario .boton:hover {
 .home-section .hero {
   width: 100%;
   min-height: 80vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../Recursos/home.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../recursos/home.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1217,7 +1217,7 @@ footer .formulario .boton:hover {
   padding-top: 3rem;
 }
 .about-section .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../Recursos/home.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../recursos/home.png");
   background-size: cover;
   background-position: center;
   min-height: 60vh;
@@ -1823,7 +1823,7 @@ body {
   background-color: #f8f9fa;
 }
 .vacation-rental-section .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../Recursos/home.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../recursos/home.png");
   background-size: cover;
   background-position: center;
   min-height: 60vh;
