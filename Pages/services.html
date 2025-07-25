@@ -45,6 +45,9 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="./contact-us.html">Contact Us</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link">Reservas: <span id="contador-reservas">0</span></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -57,6 +60,23 @@
         <section>
             <a href="./owners.html">Owners</a>
             <a href="./travelers.html">Travelers</a>
+        </section>
+        <input type="text" id="search" placeholder="Buscar por nombre o categoría...">
+        <select id="filter-location">
+          <option value="">Todas las ubicaciones</option>
+          <option value="uvita">Uvita</option>
+          <option value="quepos">Quepos</option>
+          <option value="cóbano">Cóbano</option>
+        </select>
+        <select id="filter-category">
+          <option value="">Todas las categorías</option>
+          <option value="deportes">Deportes</option>
+          <option value="gastronomía">Gastronomía</option>
+          <option value="bienestar">Bienestar</option>
+        </select>
+        <div id="store"></div>
+        <section id="resumen" class="resumen">
+          <!-- Aquí se renderiza el resumen dinámico -->
         </section>
     </main>
     <footer>
@@ -99,6 +119,10 @@
             <button class="form boton" type="submit">Subscribe</button>
         </form>
     </footer>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="services.js"></script>
 </body>
 
 </html>
