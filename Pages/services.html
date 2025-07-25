@@ -76,7 +76,11 @@
         </select>
         <div id="store"></div>
         <section id="resumen" class="resumen">
-          <!-- Aquí se renderiza el resumen dinámico -->
+            <button id="vaciar-carrito">Vaciar carrito</button>
+            <input type="number" id="servicio-id">
+            <div class="carrito-items"></div>
+            <div class="carrito-total"></div>
+            <button id="checkout">Checkout</button>
         </section>
     </main>
     <footer>
@@ -122,6 +126,90 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script id="services-data" type="application/json">
+    [
+      {
+        "id": 1,
+        "nombre": "Clase de surf",
+        "categoria": "Deportes",
+        "ubicacion": "uvita",
+        "precio": 80,
+        "imagen": "../recursos/carruseles/surf-lesson/surfboards-7300935_1280.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Chef privado",
+        "categoria": "Gastronomía",
+        "ubicacion": "quepos",
+        "precio": 150,
+        "imagen": "../recursos/carruseles/private-chef/food-8266439_1280.jpg"
+      },
+      {
+        "id": 3,
+        "nombre": "Transporte aeropuerto",
+        "categoria": "Transporte",
+        "ubicacion": "cóbano",
+        "precio": 60,
+        "imagen": "../recursos/transport_icon.png"
+      },
+      {
+        "id": 4,
+        "nombre": "Sesión de spa",
+        "categoria": "Bienestar",
+        "ubicacion": "uvita",
+        "precio": 120,
+        "imagen": "../recursos/carruseles/spa-session/Imagen de WhatsApp 2025-05-13 a las 15.18.00_a7c28100.jpg"
+      },
+      {
+        "id": 5,
+        "nombre": "Alquiler de bicicletas",
+        "categoria": "Deportes",
+        "ubicacion": "quepos",
+        "precio": 25,
+        "imagen": "../recursos/carruseles/bike-rentals/bicycles-1867046_1280.jpg"
+      },
+      {
+        "id": 6,
+        "nombre": "Tour de avistamiento de ballenas",
+        "categoria": "Tours",
+        "ubicacion": "uvita",
+        "precio": 100,
+        "imagen": "../recursos/carruseles/tours/humpback-whale-436120_640.jpg"
+      },
+      {
+        "id": 7,
+        "nombre": "Clase de yoga al amanecer",
+        "categoria": "Bienestar",
+        "ubicacion": "cóbano",
+        "precio": 40,
+        "imagen": "../recursos/carruseles/yoga-session/sunrise-3848628_1280.jpg"
+      },
+      {
+        "id": 8,
+        "nombre": "Servicio de limpieza",
+        "categoria": "Servicios",
+        "ubicacion": "quepos",
+        "precio": 30,
+        "imagen": "../recursos/cleaning-icon.png"
+      },
+      {
+        "id": 9,
+        "nombre": "Tour de delfines",
+        "categoria": "Tours",
+        "ubicacion": "uvita",
+        "precio": 90,
+        "imagen": "../recursos/carruseles/tours/dolphin-1818853_1280.jpg"
+      },
+      {
+        "id": 10,
+        "nombre": "Sesión de pilates",
+        "categoria": "Bienestar",
+        "ubicacion": "cóbano",
+        "precio": 50,
+        "imagen": "../recursos/753880_pillates_exercise_fitness_pilates_strength_icon.png"
+      }
+    ]
+    </script>
     <script src="services.js"></script>
 </body>
 
